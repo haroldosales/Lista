@@ -15,9 +15,9 @@ public class Conexao {
 	private String pass;
 
 	public Conexao() {
-		url = "jdbc:postgresql://localhost:5432/Pessoa";
-		user = "postgres";
-		pass = "toor";
+		url = "jdbc:postgresql://localhost:5432/gnu";
+		user = "haroldo";
+		pass = "2638";
 	}
 
 	private Connection getConnection() {

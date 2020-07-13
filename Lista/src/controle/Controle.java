@@ -1,14 +1,18 @@
 package controle;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.JOptionPane;
 
 import dao.Conexao;
 
 public class Controle {
 
 	public static void insere(String nome, int numero) {
-		String sql = "INSERT INTO lista (nome,numero ) VALUES ('" + nome + "','" + numero + "');";
+		String sql = "INSERT INTO item (nome,numero ) VALUES ('" + nome + "','" + numero + "');";
 		Conexao conn = new Conexao();
 		int res = conn.executeUpdate(sql);
 		if (res >= 1) {
@@ -18,7 +22,7 @@ public class Controle {
 		}
 	}
 public	static void mostrar() {
-		String sql = "SELECT * FROM lista";
+		String sql = "SELECT * FROM item";
 		Conexao conn = new Conexao();
 		
 		
@@ -35,4 +39,26 @@ public	static void mostrar() {
 			e.printStackTrace();
 		}
 	}
+
+
+public static void deletar(String nome) 
+{
+	
+	
+		String sql = "DELETE  FROM item WHERE nome = ('"+nome+"');";
+			
+		
+			Conexao conn = new Conexao();
+			int res = conn.executeUpdate(sql);
+			
+			if (res >= 1) {
+				System.out.println("Removido com sucesso!");
+			} else {
+				System.err.println("Erro , nao foi possivel");
+			}
+			
+		
+	
+}
+
 }
