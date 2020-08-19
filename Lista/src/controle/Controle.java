@@ -11,8 +11,8 @@ import dao.Conexao;
 
 public class Controle {
 
-	public static void insere(String nome, int numero) {
-		String sql = "INSERT INTO item (nome,numero ) VALUES ('" + nome + "','" + numero + "');";
+	public static void insere(String nome, int tipo) {
+		String sql = "INSERT INTO item (nome,tipo ) VALUES ('" + nome + "','" + tipo + "');";
 		Conexao conn = new Conexao();
 		int res = conn.executeUpdate(sql);
 		if (res >= 1) {
@@ -26,13 +26,13 @@ public	static void mostrar() {
 		Conexao conn = new Conexao();
 		
 		
-		System.out.println("nome - numero");
+		System.out.println("nome - tipo");
 		try {
 			ResultSet consulta = conn.executeQuery(sql);
 			while(consulta.next()) {
 				String nome = consulta.getString("nome");
-				int  numero = consulta.getInt("numero");
-				System.out.println(nome+" - "+numero);
+				int  tipo = consulta.getInt("tipo");
+				System.out.println(nome+" - "+tipo);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

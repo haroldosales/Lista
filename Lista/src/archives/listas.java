@@ -3,7 +3,7 @@ package archives;
 public class listas {
 
 	private String nome;
-	private int Quantidade;
+	private int numero;
 
 	public String getNome() {
 		return nome;
@@ -13,12 +13,12 @@ public class listas {
 		this.nome = nome;
 	}
 
-	public int getQuantidade() {
-		return Quantidade;
+	public int getNumero() {
+		return numero;
 	}
 
-	public void setQuantidade(int Quantidade) {
-		this.Quantidade = Quantidade;
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 
 }
