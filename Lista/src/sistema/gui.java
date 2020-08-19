@@ -74,8 +74,8 @@ public class gui {
 		lblNewLabel_1.setBounds(36, 66, 70, 15);
 		frame.getContentPane().add(lblNewLabel_1);
 		
-		JButton btnNewButton = new JButton("Salvar");
-		btnNewButton.addMouseListener(new MouseAdapter() {
+		JButton btnAdd = new JButton("Salvar");
+		btnAdd.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				Controle fun = new Controle();
@@ -84,17 +84,17 @@ public class gui {
 				fun.insere(txtNome.getText(), numero);
 			}
 		});
-		btnNewButton.setBounds(39, 130, 117, 25);
-		frame.getContentPane().add(btnNewButton);
+		btnAdd.setBounds(39, 130, 117, 25);
+		frame.getContentPane().add(btnAdd);
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addMouseListener(new MouseAdapter() {
+		JButton btnClose = new JButton("Fecha");
+		btnClose.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				System.exit(0);
 			}
 		});
-		btnNewButton_1.setBounds(230, 130, 117, 25);
-		frame.getContentPane().add(btnNewButton_1);
+		btnClose.setBounds(230, 130, 117, 25);
+		frame.getContentPane().add(btnClose);
 	}
 }
